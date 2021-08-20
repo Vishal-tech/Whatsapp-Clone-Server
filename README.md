@@ -20,4 +20,4 @@
   Pusher Channels provides realtime communication between servers, apps and devices. Channels is used for realtime charts, realtime user lists, realtime maps, multiplayer gaming, and many other kinds of UI updates.
 
 * Authentication - Firebase
-* Deployment - Heroku
+* Deployment - Heroku - https://whatsapp-clone-client-vishal.herokuapp.com/
