@@ -1,11 +1,11 @@
-# Whatsapp-Clone-Client
+# Whatsapp-Clone-Server
 ### _**MERN build**_ - https://whatsapp-clone-client-vishal.herokuapp.com/
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
-### **❗ Important**: This is the Client of the main Whatsapp clone project.
+### **❗ Important**: This is the Server of the main Whatsapp clone project.
 
-### Server - https://github.com/Vishal-tech/Whatsapp-Clone-Server
+### Client - https://github.com/Vishal-tech/Whatsapp-Clone-Client
 
 **Whatsapp Clone** is a real time messaging application that imitates the working of famous messaging app "Whatsapp". Unlike the real Whatsapp , this web app stores the messages in the cloud Database and authentication is done using Firebase Auth.
 
