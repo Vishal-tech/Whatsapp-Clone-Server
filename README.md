@@ -1,5 +1,5 @@
 # Whatsapp-Clone-Server
-### _**MERN build**_
+### _**MERN build**_ - https://whatsapp-clone-client-vishal.herokuapp.com/
 
 <!-- ABOUT THE PROJECT -->
 # About The Project
@@ -20,4 +20,4 @@
   Pusher Channels provides realtime communication between servers, apps and devices. Channels is used for realtime charts, realtime user lists, realtime maps, multiplayer gaming, and many other kinds of UI updates.
 
 * Authentication - Firebase
-* Deployment - Heroku - https://whatsapp-clone-client-vishal.herokuapp.com/
+* Deployment - Heroku
