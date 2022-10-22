@@ -29,17 +29,14 @@
 * Add friend
 
 # Demo
-  1. Login/Signup using you email and password\
-  
+  1. Login/Signup using you email and password
    <img src="Screenshots/login.jpg" alt="login" width="600"/>
   
   2. Copy your secret code
-     
+    <img src="Screenshots/add_frd.jpg" alt="login" width="600"/>
+    
+  3. Open another browser window (incognito) and Login using another account
 
-  3. Open another browser/incognito and Login using another account\
-
-  4. Open Add friend in Guest-2 and paste Guest-1's secret code to get connected
-
-  <img src="Screenshots/add_frd.jpg" alt="login" width="600"/>
+  4. Open Add friend in 2nd account and paste 1st account's secret code to get connected
 
   5. Send messages to see realtime changes.
