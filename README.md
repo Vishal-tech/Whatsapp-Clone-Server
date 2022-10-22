@@ -32,8 +32,8 @@
   1. Login/Signup using you email and password
    <img src="Screenshots/login.jpg" alt="login" width="600"/>
   
-  2. Copy your secret code
-    <img src="Screenshots/add_frd.jpg" alt="login" width="600"/>
+  2. Copy your secret code                     
+   <img src="Screenshots/add_frd.jpg" alt="login" width="600"/>
     
   3. Open another browser window (incognito) and Login using another account
 
