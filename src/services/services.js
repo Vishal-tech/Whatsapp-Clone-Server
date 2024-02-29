@@ -29,6 +29,7 @@ export const searchUsers = async (currentUser, payload) => {
     let excludeUsers = [
       ...currentUserObj.sentRequests,
       ...currentUserObj.pendingRequests,
+      currentUser,
     ];
     let findQuery = {};
     if (searchTerm) {
@@ -44,6 +45,15 @@ export const searchUsers = async (currentUser, payload) => {
       .limit(pageSize);
 
     return filteredUsers;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const fetchUsersByUid = async (uidArr) => {
+  try {
+    const fetchedUsers = await users.find({ uid: { $in: uidArr } });
+    return fetchedUsers;
   } catch (error) {
     throw error;
   }
@@ -92,6 +102,31 @@ export const cancelFriendRequest = async (currentUser, targetUser) => {
     );
 
     return { userDoc, friendDoc };
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const acceptFriendRequest = async (currentUser, targetUser) => {
+  try {
+    await users.findOneAndUpdate(
+      { uid: currentUser },
+      { $push: { friends: targetUser } },
+      {
+        new: true,
+      }
+    );
+
+    await users.findOneAndUpdate(
+      { uid: targetUser },
+      { $push: { friends: currentUser } },
+      {
+        new: true,
+      }
+    );
+
+    //To remove the requests in sentRequests,pendingRequests arrays respectively
+    return await cancelFriendRequest(targetUser, currentUser);
   } catch (error) {
     throw error;
   }

@@ -1,4 +1,3 @@
-import { users } from "../models/userModel.js";
 import * as services from "../services/services.js";
 
 export const getUserByUid = async (req, res) => {
@@ -31,6 +30,16 @@ export const searchUsers = async (req, res) => {
   }
 };
 
+export const fetchUsersByUid = async (req, res) => {
+  try {
+    const result = await services.fetchUsersByUid(req.body.uidArr);
+    res.json(result);
+  } catch (error) {
+    console.log("Error :", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
 export const sendFriendRequest = async (req, res) => {
   try {
     const result = await services.sendFriendRequest(
@@ -47,6 +56,19 @@ export const sendFriendRequest = async (req, res) => {
 export const cancelFriendRequest = async (req, res) => {
   try {
     const result = await services.cancelFriendRequest(
+      req.body.currentUser,
+      req.body.targetUser
+    );
+    res.json(result.userDoc);
+  } catch (error) {
+    console.log("Error :", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+};
+
+export const acceptFriendRequest = async (req, res) => {
+  try {
+    const result = await services.acceptFriendRequest(
       req.body.currentUser,
       req.body.targetUser
     );
